@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* 
+Fonte: Open Sans (google fonts)
+Cores das fontes: #555, #111
+Cor dos links: #fd8a24
+Cor da top bar e da footer: #333 
+*/
+
+:root {
+    --cor01: #555;
+    --cor02: #111;
+    --cor03: #fd8a24;
+    --cor04: #333;
+}
+
+header {
+    color: #fff;
+    background-color: var(--cor04);
+    text-align: center;
+    padding: 15px;
+}
+
+#detalhe-header {
+    background-color: var(--cor03);
+    padding: 3px;
+    border: none;
+}
+
+main {
+    max-width: 500px;
+    margin: auto;
+}
