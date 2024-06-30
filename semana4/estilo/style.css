@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 1em;
     padding: 0px;
     margin: 0px;
@@ -63,22 +63,29 @@ p#data {
     color: #5555559a
 }
 
-img.social {
-    width: 30px;
-    margin: 9px 20px 0px 0px;
+p {
+    color: var(--cor01);
+    font-size: 20px;
+    line-height: 28px;
 }
 
-main aside.conteudo-extra {
+a {
+    text-decoration: none;
     color: var(--cor03);
     font-size: large;
     font-weight: bolder;
+}
+
+img.social {
+    width: 30px;
+    margin: 9px 20px 0px 0px;
 }
 
 main figure img.imagens-principais {
     max-width: 100%;
 }
 
-main figure figcaption.legenda-imagens {
+main figure figcaption {
     font-size: 0.6em;
     color: #5555559a
 }
@@ -86,9 +93,13 @@ main figure figcaption.legenda-imagens {
 footer {
     color: #fff;
     background-color: var(--cor04);
-    font-size: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
+}
+
+footer p {
+    color: #fff;
+    font-size: 0.6em;
 }
