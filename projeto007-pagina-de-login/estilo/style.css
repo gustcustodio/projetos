@@ -1,0 +1,72 @@
+@charset "UTF-8"; 
+
+/* 
+    Paleta de cores
+    Verde: #49a09d
+    Lilás: #5f2c82
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    color: white;
+    background-color: #5f2c82;
+}
+
+main section {
+    margin: auto;
+    width: 600px;
+    text-align: center;
+    
+}
+
+div#imagem {
+    width: 600px;
+    height: 500px;
+    background-image: url(../imagens/metal.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div#formulario {
+    background-color: black;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.estiloLogin {
+    margin: 5px;
+    padding: 10px;
+    background-color: #5f2c82;
+}
+
+.corFundoForm {
+    background-color: #49a09d;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+#botaoEntrar {
+    background-color: #49a09d;
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#botaoEsqueciSenha {
+    color: #49a09d;
+    background-color: rgba(75, 75, 75, 0.5);
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
