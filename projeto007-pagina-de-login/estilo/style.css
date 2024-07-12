@@ -29,17 +29,16 @@ section#login {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(31, 31, 31);
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;    
 }
 
-/* div#imagem {
-    height: 200px;
+div#imagem {
+    height: 300px;
     background-image: url(../imagens/metal.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-} */
+}
 
 /* .material-symbols-outlined {
     font-size: 35px;
