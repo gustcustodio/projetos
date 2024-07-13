@@ -31,6 +31,7 @@ section#login {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden; /* relaçao com a borda da imagem quando em versão mobile E na exibição da section em outras versões*/
     width: 250px;
     height: 515px;
     border-radius: 25px;
@@ -38,12 +39,16 @@ section#login {
 }
 
 div#imagem {
+    display: block;
     height: 200px;
-    background-image: url(../imagens/metal.jpg);
+    background: #5f2c82 url(../imagens/metal.jpg) no-repeat;
     background-size: cover;
     background-position: left bottom;
-    background-repeat: no-repeat;
-    border-radius: 25px 25px 0px 0px;
+}
+
+div#formulario {
+    display: block;
+    padding: 10px;
 }
 
 div#formulario > h1 {
@@ -63,36 +68,43 @@ div#formulario > p {
 }
 
 .estiloLogin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    padding: 5px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    /* justify-content: center;
+    align-items: center; */
+    margin: 5px 0px;
     background-color: #5f2c82;
     border: 2px solid #b387cf7c;
     border-radius: 10px;
-    /* vertical-align: ; */
 }
+
+/* label { display: none; } */
 
 .corFundoForm {
-    color: whitesmoke;
     background-color: #49a09d;
+    width: calc(100% - 45px); /* mantém a largura do campo input quando a página aumenta horizontalmente */
+    height: 100%;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-10px); /* centraliza o campo de input dentro do block roxo */
 }
 
+input::placeholder {
+    color: rgba(245, 245, 245, 0.75);
+}
 
 #botaoEntrar {
     display: block;
-    width: 95%;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
     color: rgba(255, 255, 255, 0.800);
     background-color: #49a09d;
     cursor: pointer;
-    margin: 5px;
-    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 #botaoEntrar:hover {
@@ -101,15 +113,22 @@ div#formulario > p {
 
 #botaoEsqueciSenha {
     display: block;
-    width: 95%;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
     height: 40px;
+    padding-top: 10px;
+    margin-top: 5px;
     color: #49a09d;
     background-color: rgba(31,31,31);
     border: 1px solid #49a09d;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
-    margin: 5px;
-    padding: 10px;
+}
+
+#botaoEsqueciSenha > span {
+    font-size: 1em;
+    vertical-align: middle;
 }
 
 #botaoEsqueciSenha:hover {
