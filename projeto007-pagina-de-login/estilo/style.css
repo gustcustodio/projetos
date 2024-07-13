@@ -79,8 +79,6 @@ div#formulario > p {
     border-radius: 10px;
 }
 
-/* label { display: none; } */
-
 .corFundoForm {
     background-color: #49a09d;
     width: calc(100% - 45px); /* mantém a largura do campo input quando a página aumenta horizontalmente */
@@ -91,9 +89,10 @@ div#formulario > p {
     transform: translateY(-10px); /* centraliza o campo de input dentro do block roxo */
 }
 
-input::placeholder {
-    color: rgba(245, 245, 245, 0.75);
-}
+input:focus {color: white;}
+input::placeholder {color: rgba(245, 245, 245, 0.75);}
+input#imail {outline: none;}
+input#isenha {outline: none;}
 
 #botaoEntrar {
     display: block;
