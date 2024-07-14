@@ -8,12 +8,16 @@
 }
 
 body, html {
-    position: relative;
-    width: 800px;
-    height: 100vh;
+    max-width: 800px;
+    height: 100vh; 
     margin: auto;
     color: white;
     background-color: black;
+}
+
+.body, html::-webkit-scrollbar {
+    width: 0; /* Define a largura da barra de rolagem como 0 */
+    height: 0; /* Define a altura da barra de rolagem como 0 */
 }
 
 header {
@@ -25,17 +29,14 @@ header {
 }
 
 main {
-    position: relative;
     background: url(../imagens/people.jpg) no-repeat;
     background-size: cover;
     height: 550px;
 }
 
 section {
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
+    float: right;
+    margin: 20px;
     width: 250px;
     height: 430px;
     color: black;
@@ -55,14 +56,7 @@ div.formulario p {
     margin-bottom: 15px;
 }
 
-#inNome {
-    box-sizing: border-box;
-    padding: 5px;
-    width: 100%;
-    border: none;
-}
-
-#inEmail {
+input, select {
     box-sizing: border-box;
     padding: 5px;
     width: 100%;
@@ -70,56 +64,41 @@ div.formulario p {
 }
 
 #inCidade {
-    box-sizing: border-box;
-    padding: 5px;
-    width: 100%;
-    border: none;
-}
-
-#inCidade {
-    box-sizing: border-box;
-    padding: 5px;
-    width: 100%;
-    border: none;
-    appearance: none;
-    background: url(../imagens/arrow.jpg) no-repeat right center white;
+    box-sizing: border-box; /* Inclui o padding e a border na largura e altura totais do elemento */
+    padding: 5px; /* Adiciona um padding de 5 pixels dentro do elemento */
+    width: 100%; /* Define a largura do elemento para 100% da largura do elemento pai */
+    border: none; /* Remove qualquer borda do elemento */
+    appearance: none; /* Remove a aparência padrão do navegador para o elemento */
+    -moz-appearance: none; /* Remove a aparência padrão do Firefox */
+    -webkit-appearance: none; /* Remove a aparência padrão dos navegadores baseados no WebKit (Chrome, Safari) */
+    background: url(../imagens/arrow.jpg) no-repeat right center white; /* Define a imagem de fundo com a seta, não repete a imagem, posiciona à direita e centraliza verticalmente, e define o fundo branco */
 }
 
 #button-submit {
-    box-sizing: border-box;
     color: white;
     background-color: #45afd3;
     border: none;
     padding: 10px;
-    width: 100%;
 }
 
 footer {
-    height: 364px;
+    display: inline-block;
+    text-align: center;
+    padding: 40px;
     background-color: rgb(56, 56, 56);
 }
 
 footer > img {
-    display: block;
-    position: relative;
-    top: 20%;
-    left: 20%;
-    width: 150px;
+    width: 160px;
 }
 
 div.texto {
-    position: relative;
-    display: block;
-    float: right;
-    width: 400px;
-    bottom: 35%; 
-    right: 5%;
+    display: inline-block;
+    text-align: left;
+    max-width: 40%;
+    margin-left: 40px;
 }
 
-footer div h2 {
-    margin-bottom: 20px;
-}
-
-footer div p {
-    margin-bottom: 20px;
+.mb {
+    margin-bottom: 10px;
 }
