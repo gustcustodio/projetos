@@ -9,12 +9,12 @@
 
 body, html {
     max-width: 800px;
-    height: 100vh; 
-    margin: auto;
+    margin: auto; /* Centraliza o conteúdo horizontalmente */
     color: white;
     background-color: black;
 }
 
+/* Esconde a barra de rolagem nos navegadores baseados em Webkit (Chrome, Safari) */
 .body, html::-webkit-scrollbar {
     width: 0; /* Define a largura da barra de rolagem como 0 */
     height: 0; /* Define a altura da barra de rolagem como 0 */
@@ -35,7 +35,7 @@ main {
 }
 
 section {
-    float: right;
+    float: right; /* Flutua o elemento para a direita */
     margin: 20px;
     width: 250px;
     height: 430px;
@@ -57,7 +57,7 @@ div.formulario p {
 }
 
 input, select {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Inclui o padding e a borda na largura e altura totais do elemento */
     padding: 5px;
     width: 100%;
     border: none;
@@ -65,9 +65,9 @@ input, select {
 
 #inCidade {
     box-sizing: border-box; /* Inclui o padding e a border na largura e altura totais do elemento */
-    padding: 5px; /* Adiciona um padding de 5 pixels dentro do elemento */
+    padding: 5px;
     width: 100%; /* Define a largura do elemento para 100% da largura do elemento pai */
-    border: none; /* Remove qualquer borda do elemento */
+    border: none;
     appearance: none; /* Remove a aparência padrão do navegador para o elemento */
     -moz-appearance: none; /* Remove a aparência padrão do Firefox */
     -webkit-appearance: none; /* Remove a aparência padrão dos navegadores baseados no WebKit (Chrome, Safari) */
@@ -101,4 +101,18 @@ div.texto {
 
 .mb {
     margin-bottom: 10px;
+}
+
+/* Define um media query para telas com largura máxima de 600px */
+@media screen and (max-width: 600px){
+    main {
+        position: relative;
+    } 
+
+    section {
+        position: absolute;
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%, -50%);
+    }    
 }
