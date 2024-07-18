@@ -24,6 +24,8 @@
 :root {
   --font-family-main: "Outfit";
   --font-family-tittles: "Young Serif", sans-serif;
+  --font-h1-color: hsl(24, 5%, 18%);
+  --font-main-color: hsl(30, 18%, 34%);
   --background-body: hsl(30, 54%, 90%);
   --background-main-footer: hsl(0, 0%, 100%);
   --background-preparation: hsl(330, 100%, 98%);
@@ -31,16 +33,13 @@
   --color-preparation-li-a: hsl(332, 51%, 32%);
 }
 
-/* * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-} */
-
 body,
 html {
+  color: var(--font-main-color);
   font-family: var(--font-family-main);
   font-weight: 400;
+  line-height: 1.3em;
+  /* text-align: justify; */
   margin: auto;
   max-width: 375px;
   /* height: 100vh; */
@@ -60,6 +59,10 @@ main {
   background-color: var(--background-main-footer);
 }
 
+h1 {
+  color: var(--font-h1-color);
+}
+
 #preparation {
   background-color: var(--background-preparation);
   padding: 10px;
@@ -70,17 +73,28 @@ main {
   color: var(--color-preparation-li-a);
 }
 
+.tittles {
+  font-family: var(--font-family-tittles);
+}
+
+li {
+    margin-bottom: 15px;   
+}
+
+li::marker {    
+    font-size: smaller;
+    color: var(--color-titles-li-numbers);
+  }
+
 .li-highlight::marker {
   /* não conhecia essa pseudo-classe */
   color: var(--color-preparation-li-a);
 }
 
-.tittles {
-  font-family: var(--font-family-tittles);
-}
-
-li::marker {
+ol li::marker {
   color: var(--color-titles-li-numbers);
+  font-size: medium;
+  font-weight: bolder;
 }
 
 .tittles-numbers {
