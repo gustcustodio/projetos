@@ -46,18 +46,24 @@ html {
   background-color: var(--background-body);
 }
 
-header img {
+/* header img {
   display: flex;
   width: 100%;
+} */
+
+img {
+  width: calc(100% + 40px);
+  margin-left: -20px;
 }
 
 main {
-  padding: 20px;
+  padding: 0px 20px;
   background-color: var(--background-main-footer);
 }
 
 h1 {
   color: var(--font-h1-color);
+  font-size: 1.7em;
 }
 
 #preparation {
@@ -122,6 +128,11 @@ footer {
   text-align: center;
   font-size: 10px;
   background-color: var(--background-main-footer);
+}
+
+footer hr {
+  margin: 0px;
+  padding: 0px;
 }
 
 a {
